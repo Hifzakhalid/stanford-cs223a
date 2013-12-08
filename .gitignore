@@ -1,3 +1,4 @@
+# Default GitHub files for LaTeX
 *.acn
 *.acr
 *.alg
@@ -30,3 +31,7 @@
 *.vrb
 *.xdy
 *.tdo
+
+# This ones will be avoided also
+.fls
+.pdf
