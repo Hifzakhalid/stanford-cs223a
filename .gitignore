@@ -33,5 +33,5 @@
 *.tdo
 
 # This ones will be avoided also
-.fls
-.pdf
+*.fls
+*.pdf
