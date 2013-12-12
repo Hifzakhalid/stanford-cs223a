@@ -1,6 +1,6 @@
 %insert copyright here
 \documentclass{article}
-\usepackage{amsmath}
+\usepackage{mathtools}
 \begin{document}
 \title{Stanford CS223A - Introduction to robotics \\
   Homework \#1}
@@ -10,12 +10,37 @@
 
 Exercise 1.
 
-First rotation matrix:
-$$\begin{matrix}
-  c\phi & -s\phi & 0 \\
-  s\phi & c\phi  & 0 \\
-  0     &        & 1
-\end{matrix}$$
+Short reminder of the naming conventions:
+
+\begin{equation}
+  \prescript{A}{}{P} = \prescript{A}{B}{R} \prescript{B}{}{P}
+\end{equation}
+
+The problem described is a combination of 2 rotations in two different frames:
+
+\begin{equation}
+  \prescript{A}{B}{R} = \prescript{A}{A'}{R} \prescript{A'}{B}{R} = R_{y}(\theta) R_{z}(\phi)
+\end{equation}
+
+The first rotation can be described as a basic rotation matrix:
+
+\begin{equation}
+  \prescript{A}{A'}{R} = R_{y}(\theta) = \begin{bmatrix}
+                                            c\theta  & 0 & s\theta \\
+                                            0        & 1 & 0        \\
+                                            -s\theta & 0 & c\theta
+                                          \end{bmatrix}
+\end{equation}
+
+The second rotation is also a basic rotation matrix:
+
+\begin{equation}
+  \prescript{A'}{B}{R} = R_{z}(\phi) = \begin{bmatrix}
+                                          c\phi & -s\phi & 0 \\
+                                          s\phi & c\phi  & 0 \\
+                                          0     & 0      & 1
+                                        \end{bmatrix}
+\end{equation}
 
 \end{document}
 
