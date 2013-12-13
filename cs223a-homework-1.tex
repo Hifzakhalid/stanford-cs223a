@@ -56,6 +56,31 @@ This exercise is the case of rotation composition using different reference fram
 
 Exercise 2.
 
+The first rotation gives:
+
+\begin{equation}
+  \prescript{A}{}{P'} = R_{z}(\phi) \prescript{A}{}{P}
+\end{equation}
+
+The second rotation is then applied to the first one:
+
+\begin{equation}
+  \prescript{A}{}{P''} = R_{y}(\theta) \prescript{A}{}{P'} = R_{y}(\theta) R_{z}(\phi) \prescript{A}{}{P}
+\end{equation}
+
+So:
+
+\begin{equation}
+  R(\phi, \theta) = R_{y}(\theta) R_{z}(\phi)
+\end{equation}
+
+The correction concludes that therefore this is the same matrix than the one from the previous exercise. It took me time to spot what I did not found obvious in this conclusion. That comes from the reference frame which has been omitted. Ii is true because:
+
+\begin{equation}
+  \prescript{A'}{}{R_{y}(\theta)} = \prescript{A}{}{R_{y}(\theta)}  
+\end{equation}
+
+And this last equation is true because ${A}$ and ${A'}$ share the $y$ axis. 
 
 \end{document}
 
