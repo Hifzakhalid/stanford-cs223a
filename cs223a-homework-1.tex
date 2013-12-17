@@ -10,19 +10,19 @@
 
 Exercise 1.
 
-Short reminder of the naming conventions:
+Equation giving the vector representation between frame A and B:
 
 \begin{equation}
   \prescript{A}{}{P} = \prescript{A}{B}{R} \prescript{B}{}{P}
 \end{equation}
 
-The problem described is a combination of 2 rotations in two different frames:
+The problem described is a combination of rotations of two different frames:
 
 \begin{equation}
   \prescript{A}{B}{R} = \prescript{A}{A'}{R} \prescript{A'}{B}{R} = R_{y}(\theta) R_{z}(\phi)
 \end{equation}
 
-The first rotation can be described as a basic rotation matrix:
+The first rotation can be described as a basic rotation matrix around the y axis:
 
 \begin{equation}
   \prescript{A}{A'}{R} = R_{y}(\theta) = \begin{bmatrix}
@@ -32,7 +32,7 @@ The first rotation can be described as a basic rotation matrix:
                                           \end{bmatrix}
 \end{equation}
 
-The second rotation is also a basic rotation matrix:
+The second rotation is a basic rotation matrix around the z axis:
 
 \begin{equation}
   \prescript{A'}{B}{R} = R_{z}(\phi) = \begin{bmatrix}
@@ -52,7 +52,7 @@ So the composition of both rotations gives:
                         \end{bmatrix}
 \end{equation}
 
-This exercise is the case of rotation composition using different reference frames. The reference of the frame is required in the notations.
+This exercise is the case of a frame representation using Euler notation. The reference frame is required in the notations.
 
 Exercise 2.
 
@@ -74,13 +74,10 @@ So:
   R(\phi, \theta) = R_{y}(\theta) R_{z}(\phi)
 \end{equation}
 
-The correction concludes that therefore this is the same matrix than the one from the previous exercise. It took me time to spot what I did not found obvious in this conclusion. That comes from the reference frame which has been omitted. Ii is true because:
+The matrix is the same. This vector can imagined as a reference frame, so both exercise demonstrates that a Z-Y fixed angle notation is equivalent to a Y-Z Euler angle notation.
 
-\begin{equation}
-  \prescript{A'}{}{R_{y}(\theta)} = \prescript{A}{}{R_{y}(\theta)}  
-\end{equation}
+Exercise 3.
 
-And this last equation is true because ${A}$ and ${A'}$ share the $y$ axis. 
 
 \end{document}
 
