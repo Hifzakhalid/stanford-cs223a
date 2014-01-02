@@ -47,7 +47,7 @@ So the composition of both rotations gives:
 \begin{equation}
   \prescript{A}{B}{R} = \begin{bmatrix}
                           c\theta c\phi  & -c\theta s\phi & s\theta \\
-                          s\phi          & c\phi          & 0 \\
+                          s\phi          & c\phi          & 0       \\
                           -s\theta c\phi & -s\theta s\phi & c\theta
                         \end{bmatrix}
 \end{equation}
@@ -78,11 +78,41 @@ The matrix is the same. This vector can imagined as a reference frame, so both e
 
 Exercise 3.
 
-Here is the equation to compute the transformation from frame $\{A\}$ to frame $\{B\}$:
+(a) Here is the equation to compute the transformation from frame $\{A\}$ to frame $\{B\}$:
 
 \begin{equation}
-  \prescript{B}{A}{T}^{T} = \prescript{A}{B}{T} \\
-  \prescript{A}{B}{T} =
+  \prescript{A}{B}{T} = \prescript{B}{A}{T}^{T} \\
+  = \begin{bmatrix}
+      R^{T} & -R^{T}Q \\
+      0     & 1       
+    \end{bmatrix}
+\end{equation}
+
+\begin{equation}
+  R^{T} = \begin{bmatrix}
+            1 & 0        & 0       \\
+            0 & c\theta  & s\theta \\
+	    0 & -s\theta & c\theta
+	  \end{bmatrix}
+\end{equation}
+
+\begin{equation}
+  R^{T}Q = \begin{bmatrix}
+             1                    \\
+             2c\theta + 3s\theta  \\
+	     -2s\theta + 3c\theta \\
+	   \end{bmatrix}
+\end{equation}
+
+By combining the previous matrix and vector into an homogenous transform:
+
+\begin{equation}
+  \prescript{A}{B}{T} = \begin{bmatrix}
+                          1 & 0        & 0       & -1                   \\
+			  0 & c\theta  & s\theta & -2c\theta - 3s\theta \\
+			  0 & -s\theta & c\theta & 2s\theta - 3 c\theta \\
+			  0 & 0        & 0       & 1                    \\
+			\end{bmatrix}
 \end{equation}
 
 \end{document}
