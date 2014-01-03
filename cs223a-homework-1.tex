@@ -115,5 +115,38 @@ By combining the previous matrix and vector into an homogenous transform:
 			\end{bmatrix}
 \end{equation}
 
+(b) Considering:
+
+\begin{equation}
+  cos(45) = sin(45) = \frac{1}{\sqrt{2}}
+\end{equation} 
+
+The transformation matix becomes:
+
+\begin{equation}
+  \prescript{A}{B}{T} =
+    \begin{bmatrix}
+       1 & 0                   & 0                  & -1                  \\
+       0 & \frac{1}{\sqrt{2}}  & \frac{1}{\sqrt{2}} & \frac{-5}{\sqrt{2}} \\
+       0 & \frac{-1}{\sqrt{2}} & \frac{1}{\sqrt{2}} & \frac{-1}{\sqrt{2}} \\
+       0 & 0                   & 0                  & 1                   \\
+    \end{bmatrix}
+\end{equation}
+
+Applied to the given vector:
+
+\begin{equation}
+  \prescript{A}{}{P} = \begin{bmatrix}
+                         3                  \\
+                         \frac{6}{\sqrt{2}} \\
+                         0                  \\
+                       \end{bmatrix}
+		     = \begin{bmatrix}
+		         3    \\
+			 4.24 \\
+			 0    \\
+	               \end{bmatrix}
+\end{equation}
+
 \end{document}
 
