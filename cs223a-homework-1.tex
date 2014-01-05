@@ -1,5 +1,5 @@
 %insert copyright here
-\documentclass{article}
+\documentclass{exam}
 \usepackage{mathtools}
 \begin{document}
 \title{Stanford CS223A - Introduction to robotics \\
@@ -8,7 +8,9 @@
 \date{December 2013}
 \maketitle
 
-Exercise 1.
+\begin{questions}
+
+\question
 
 Equation giving the vector representation between frame A and B:
 
@@ -54,7 +56,7 @@ So the composition of both rotations gives:
 
 This exercise is the case of a frame representation using Euler notation. The reference frame is required in the notations.
 
-Exercise 2.
+\question
 
 The first rotation gives:
 
@@ -76,9 +78,12 @@ So:
 
 The matrix is the same. This vector can imagined as a reference frame, so both exercise demonstrates that a Z-Y fixed angle notation is equivalent to a Y-Z Euler angle notation.
 
-Exercise 3.
+\question
 
-(a) Here is the equation to compute the transformation from frame $\{A\}$ to frame $\{B\}$:
+\begin{parts}
+\part
+
+Here is the equation to compute the transformation from frame $\{A\}$ to frame $\{B\}$:
 
 \begin{equation}
   \prescript{A}{B}{T} = \prescript{B}{A}{T}^{T} \\
@@ -115,7 +120,9 @@ By combining the previous matrix and vector into an homogenous transform:
 			\end{bmatrix}
 \end{equation}
 
-(b) Considering:
+\part
+
+Considering:
 
 \begin{equation}
   cos(45) = sin(45) = \frac{1}{\sqrt{2}}
@@ -148,9 +155,14 @@ Applied to the given vector:
 	               \end{bmatrix}
 \end{equation}
 
-Exercise 4.
+\end{parts}
 
-(a) The matrix is orthogonal:
+\question
+
+\begin{parts}
+\part
+
+The matrix is orthogonal:
 
 \begin{equation}
   {R}^{T}R = I
@@ -161,6 +173,12 @@ And the determinant is equal to 0:
 \begin{equation}
   \frac{1}{4} + 0 + \frac{1}{4} - \frac{-1}{4} - \frac{-1}{4} - 0 = 1 
 \end{equation}
+
+So this matrix is a rotation matrix.
+
+\end{parts}
+
+\end{questions}
 
 \end{document}
 
