@@ -76,7 +76,7 @@ So:
   R(\phi, \theta) = R_{y}(\theta) R_{z}(\phi)
 \end{equation}
 
-The matrix is the same. This vector can imagined as a reference frame, so both exercise demonstrates that a Z-Y fixed angle notation is equivalent to a Y-Z Euler angle notation.
+The matrix is the same. This vector can be imagined as a reference frame, so both exercise demonstrates that a Z-Y fixed angle notation is equivalent to a Y-Z Euler angle notation.
 
 \question
 
@@ -128,7 +128,7 @@ Considering:
   cos(45) = sin(45) = \frac{1}{\sqrt{2}}
 \end{equation} 
 
-The transformation matix becomes:
+The transformation matrix becomes:
 
 \begin{equation}
   \prescript{A}{B}{T} =
@@ -242,6 +242,38 @@ Applied to the rotation matrix, that gives:
 
 \begin{equation}
   \varepsilon_{3} = 0.146
+\end{equation}
+
+\begin{equation}
+  \varepsilon_{4} = 0.854
+\end{equation}
+
+The signs could be determined with the following equations, considering that $\varepsilon_{4}$ is not null:
+
+\begin{equation}
+  \varepsilon_{1} = \frac{r_{32} - r_{23}}{4\varepsilon_{4}}
+\end{equation}
+
+\begin{equation}
+  \varepsilon_{2} = \frac{r_{13} - r_{31}}{4\varepsilon_{4}}
+\end{equation}
+
+\begin{equation}
+  \varepsilon_{3} = \frac{r_{21} - r_{12}}{4\varepsilon_{4}}
+\end{equation}
+
+So the values are:
+
+\begin{equation}
+  \varepsilon_{1} = -0.354
+\end{equation}
+
+\begin{equation}
+  \varepsilon_{2} = 0.354
+\end{equation}
+
+\begin{equation}
+  \varepsilon_{3} = -0.146
 \end{equation}
 
 \begin{equation}
