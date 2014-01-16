@@ -63,6 +63,46 @@ Where $T$ is the frame transform from $\{A\}$ to $\{B\}$. In this case:
   T = T_{1}^{-1}
 \end{equation}
 
+\part
+
+In this case, we use the similarity transform with $T_{3}$ after a $T'_{2}T_{1}$ displacement:
+
+\begin{equation}
+  T'_{3} = (T'_{2}T_{1})T_{3}(T'_{2}T_{1})^{-1}
+\end{equation}
+
+So with the result of the first part:
+
+\begin{equation}
+  T'_{3} = T_{1}T_{2}T_{3}T_{1}^{-1}T_{2}^{-1}
+\end{equation}
+
+\part
+
+The same formulae is applied again on this joint:
+
+\begin{equation}
+  T'_{4} = (T'_{3}T'_{2}T_{1})T_{4}(T'_{3}T'_{2}T_{1})^{-1}
+\end{equation}
+
+So if we develop this equation:
+
+\begin{equation}
+  T'_{4} = (T_{1}T_{2}T_{3}T_{1}^{-1}T_{2}^{-1}
+            T_{1}T_{2}T_{1}^{-1}
+            T_{1})
+	    T_{4}
+           (T_{1}T_{2}T_{3}T_{1}^{-1}T_{2}^{-1}
+	    T_{1}T_{2}T_{1}^{-1}
+	    T_{1})^{-1}
+\end{equation}
+
+After the simplification:
+
+\begin{equation}
+  T'_{4} = (T_{1}T_{2}T_{3})T_{4}(T_{3}^{-1}T_{2}^{-1}T_{1}^{-1})
+\end{equation}
+
 \end{parts}
 
 \end{questions}
