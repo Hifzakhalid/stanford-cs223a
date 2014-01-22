@@ -170,8 +170,17 @@ The Denavit-Hartenberg parameters are the following:
 
 \part
 
-Let's apply the forward kinematics from the DH parameter formula:
+Let's apply the forward kinematics formula from the DH parameters:
 
+\begin{equation}
+  \prescript{i-1}{i}T = \begin{bmatrix}
+    c\theta_{i}              & -s\theta_{i}             & 0              & a_{i-1}             \\
+    s\theta_{i}c\alpha_{i-1} & c\theta_{i}c\alpha_{i-1} & -s\alpha_{i-1} & -s\alpha_{i-1}d_{i} \\
+   s\theta_{i}s\alpha_{i-1}  & c\theta_{i}s\alpha_{i-1} & c\alpha_{i-1}  & c\alpha_{i-1}d_{i}  \\
+   0                         & 0                        & 0              & 1                   \\ 
+			\end{bmatrix}
+\end{equation}
+		  
 \end{parts}
 
 \end{questions}
