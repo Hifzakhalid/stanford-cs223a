@@ -79,7 +79,7 @@ So with the result of the first part:
 
 \part
 
-The same formulae is applied again on this joint:
+The same formula is applied again on this joint:
 
 \begin{equation}
   T'_{4} = (T'_{3}T'_{2}T_{1})T_{4}(T'_{3}T'_{2}T_{1})^{-1}
@@ -241,7 +241,46 @@ The matrix are multiplied to each other, from the first to the last:
 
 \part
 
-Clearly not easy to draw the axis and the perpendiculars when the joints and the axis are not aligned. The schematic may become misleading at the end. According to me, 
+Clearly not easy to draw the axis and the perpendiculars when the joints and the axis are not aligned. The schematic may become misleading at the end. According to me, the simple way to proceed is the use the definitions of the parameters.
+
+Notably:
+
+\begin{itemize}
+  \item $\alpha_{i}$ is the angle between $z_{i}$ and $z_{i+1}$ along $x_{i}$
+  \item $\theta_{i}$ is the angle between $x_{i-1}$ and $x_{i}$ along $z_{i}$
+\end{itemize}
+
+So if you manage to see the $x_{i}$ and $z_{i}$ axis, you can more easily see if a parameter is null or not.
+
+They are several ways to define the D-H parameters. In my schematic, $d_{4} = 0$ and $d_{5}$ is not null.  
+
+\part
+
+With the configuration of my schematic, the D-H parameters are:
+
+\begin{centering}
+
+\begin{tabular}{|| c | c | c | c | c ||}
+  \hline
+  i & $a_{i-1}$ & $\alpha_{i-1}$ & $d_{i}$ & $\theta_{i}$ \\
+  \hline
+  1 & 0         & 0              & 0       & $\theta_{1}$ \\
+  \hline
+  2 & $a_{1}$   & $\alpha_{1}$   & $d_{2}$ & $\theta_{2}$ \\
+  \hline
+  3 & 0         & $\alpha_{2}$   & $d_{3}$ & $\theta_{3}$ \\
+  \hline
+  4 & 0         & $\alpha_{3}$   & 0       & $\theta_{4}$ \\
+  \hline
+  5 & $a_{5}$   & 0              & $d_{5}$ & $\theta_{5}$ \\
+  \hline
+\end{tabular}
+
+The parameters of the schematic of the homework are variable. The other parameters are fixed.
+
+\end{centering}
+
+\end{parts}
 
 \end{questions}
 
