@@ -180,8 +180,68 @@ Let's apply the forward kinematics formula from the DH parameters:
    0                         & 0                        & 0              & 1                   \\ 
 			\end{bmatrix}
 \end{equation}
-		  
+
+This formula is applied to the several joints:
+
+\begin{equation}
+  \prescript{0}{1}T = \begin{bmatrix}
+    c\theta_{1} & -s\theta_{1} & 0 & 0 \\
+    s\theta_{1} & c\theta_{1}  & 0 & 0 \\
+    0           & 0            & 1 & 0 \\
+    0           & 0            & 0 & 1 \\ 
+                      \end{bmatrix}
+\end{equation}
+
+\begin{equation}
+  \prescript{1}{2}T = \begin{bmatrix}
+    c\theta_{2} & -s\theta_{2} & 0  & 0 \\
+    0           & 0            & -1 & 0 \\
+    s\theta{2}  & c\theta{2}   & 0  & 0 \\
+    0           & 0            & 0  & 1 \\ 
+                      \end{bmatrix}
+\end{equation}
+
+\begin{equation}
+  \prescript{2}{3}T = \begin{bmatrix}
+    1 & 0 & 0  & l      \\
+    0 & 0 & -1 & -d_{3} \\
+    0 & 1 & 0  & 0      \\
+    0 & 0 & 0  & 1      \\ 
+                      \end{bmatrix}
+\end{equation}
+
+The matrix are multiplied to each other, from the first to the last:
+
+\begin{equation}
+  \prescript{0}{3}T = \prescript{0}{1}T\prescript{1}{2}T\prescript{2}{3}T
+\end{equation}
+
+\begin{equation}
+  \prescript{0}{2}T = \begin{bmatrix}
+    c_{12}     & -c_{1}s_{2} & s_{1}  & 0 \\
+    s_{1}c_{2} & -s_{12}     & -c_{1} & 0 \\
+    s_{2}      & c_{2}       & 0      & 0 \\
+    0          & 0           & 0      & 1 \\ 
+                      \end{bmatrix}
+\end{equation}
+
+\begin{equation}
+  \prescript{0}{3}T = \begin{bmatrix}
+    c_{12}     & s_{1}  & c_{1}s_{2} & lc_{12} + d_{3}c_{1}s_{2} \\
+    s_{1}c_{2} & -c_{1} & s_{12}     & ls_{1}c_{2} + d_{3}s_{12} \\
+    s_{2}      & 0      & -c_{2}     & ls_{2} - d_{3}c_{2}       \\
+    0          & 0      & 0          & 1                         \\ 
+                      \end{bmatrix}
+\end{equation}
+
 \end{parts}
+
+\question
+\begin{parts}
+
+\part
+
+Clearly not easy to draw the axis and the perpendiculars when the joints and the axis are not aligned. The schematic may become misleading at the end. According to me, 
 
 \end{questions}
 
