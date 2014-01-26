@@ -12,10 +12,60 @@
 
 \question
 
+Let's deal with the linear velocity first:
+
+\begin{equation}
+  x_{P} = \begin{bmatrix}
+            L_{1}c_{1} + L_{2}c_{1}c_{3} - s_{1}d_{2} \\
+            L_{1}s_{1} + L_{2}s_{1}c_{3} + c_{1}d_{2} \\
+            -L_{2}s_{3}                               \\
+           \end{bmatrix}
+\end{equation}
+
+The derivation of this vector for each joint parameter gives:
+
+\begin{equation}
+  J_{V} = \begin{bmatrix}
+    -L_{1}s_{1} - L_{2}s_{1}c_{3} - c_{1}d_{2} & -s_{1} & -L_{2}c_{1}s_{3} \\
+    L_{1}c_{1} + L_{2}c_{1}c_{3} - s_{1}d_{2}  & c_{1}  & -L_{2}s_{1}s_{3} \\
+    0                                          & 0      & -L_{2}c_{3}      \\
+          \end{bmatrix}
+\end{equation}
+
+The angular velocity Jacobian can be determined using the trick of the intermediate end effector transform calculation. The missing transform being prismatic, it does not contribute 
+
+\begin{equation}
+  J_{w} = \begin{bmatrix}
+    0 & 0 & -s_{1} \\
+    0 & 0 & c_{1}  \\
+    1 & 0 & 0      \\
+          \end{bmatrix}
+\end{equation}
+
+\question
 \begin{parts}
+
 \part
 
-Another exercise.
+The position of the origin can be determined using simple trigonometric equations:
+
+\begin{equation}
+  \prescript{0}{}P_{org} = \begin{bmatrix}
+                             L_{2}c_{2}         \\
+			     d_{1} + L_{2}s_{2} \\
+			   \end{bmatrix}
+\end{equation}
+
+\part
+
+Based on the previous equation, the linear velocity Jacobian is:
+
+\begin{equation}
+  J_{V} = \begin{bmatrix}
+            0 & -L_{2}s_{1} \\
+	    1 & L_{2}c_{2}  \\
+	  \end{bmatrix}
+\end{equation} 
 
 \end{parts}
 
