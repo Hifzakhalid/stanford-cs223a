@@ -129,6 +129,45 @@ We use the formula of the handout 3, p.4 to calculate the intermediate transform
                      \end{bmatrix}
 \end{equation}
 
+\begin{equation}
+  \prescript{3}{4}T = \begin{bmatrix}
+    1 & 0  & 0 & 1 \\
+    0 & 0  & 1 & 0 \\
+    0 & -1 & 0 & 0 \\
+    0 & 0  & 0 & 1 \\
+                     \end{bmatrix}
+\end{equation}
+
+The combination of the intermediate transforms gives:
+
+\begin{equation}
+  \prescript{0}{2}T = \prescript{0}{1}T\prescript{1}{2} = \begin{bmatrix}
+    c_{1}c_{2} & -c_{1}s_{2} & -s_{1} & c_{1} \\
+    s_{1}c_{2} & -s_{1}s_{2} & c_{1}  & s_{1} \\
+    -s_{2}     & -c_{2}      & 0      & 0     \\
+    0          & 0           & 0      & 1     \\
+                                                          \end{bmatrix}
+\end{equation}
+
+\begin{equation}
+  \prescript{0}{3}T = \prescript{0}{2}T\prescript{2}{3} = \begin{bmatrix}
+    c_{1}c_{2}c_{3}-s_{1}s_{3} & -c_{1}c_{2}s_{3}-s_{1}c_{3} & c_{1}s_{2} & c_{1}c_{2}+c_{1} \\
+    s_{1}c_{2}c_{3}+c_{1}s_{3} & -s_{1}c_{2}s_{3}+c_{1}c_{3} & s_{1}s_{2} & s_{1}c_{2}+s_{1} \\
+    -s_{2}c_{3}                & s_{2}s_{3}                  & c_{2}      & -s_{2}           \\
+    0                          & 0                           & 0          & 1                \\
+                                                          \end{bmatrix}
+\end{equation}
+
+\begin{equation}
+  \prescript{0}{4}T = \prescript{0}{3}T\prescript{3}{4} = \begin{bmatrix}
+    c_{1}c_{2}c_{3}-s_{1}s_{3} & -c_{1}s_{2} & -c_{1}c_{2}s_{3}-s_{1}c_{3} & c_{1}c_{2}c_{3}-s_{1}s_{3}+c_{1}c_{2}+c_{1} \\
+    s_{1}c_{2}c_{3}+c_{1}s_{3} & -s_{1}s_{2} & s_{1}c_{2}s_{3}+c_{1}c_{3}  & s_{1}c_{2}c_{3}+c_{1}s_{3}+s_{1}c_{2}+s_{1} \\
+    -s_{2}c_{3}                & -c_{2}      &  s_{2}s_{3}                 & -s_{2}c_{3}-s_{2}                           \\
+    0                          & 0           & 0                           & 1                                           \\
+                                                          \end{bmatrix}
+\end{equation}
+
+
 \end{parts}
 
 \end{questions}
