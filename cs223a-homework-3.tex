@@ -73,6 +73,64 @@ In case of singularity, $det(J_{V}) = 0$, meaning that $L_{2}s_{1} = 0$. In this
 
 \end{parts}
 
+\question
+\begin{parts}
+
+\part
+
+All of the $x$ axis are aligned. The $z$ axis are directed to the top or out of the page. In this configuration, the D-H parameters are as follow:
+
+\begin{centering}
+
+\begin{tabular}{|| c | c | c | c | c ||}
+  \hline
+  i & $a_{i-1}$     & $\alpha_{i-1}$ & $d_{i}$      & $\theta_{i}$ \\
+  \hline
+  1 & 0             & 0              & $\theta_{1}$ & 0            \\
+  \hline
+  2 & $-90^{\circ}$ & 1              & $\theta_{2}$ & 0            \\
+  \hline
+  3 & $90^{\circ}$  & 1              & $\theta_{3}$ & 0            \\
+  \hline
+  4 & $-90^{\circ}$ & 1              & 0            & 0            \\
+  \hline
+\end{tabular}
+
+\end{centering}
+
+\part
+
+We use the formula of the handout 3, p.4 to calculate the intermediate transforms.
+
+\begin{equation}
+  \prescript{0}{1}T = \begin{bmatrix}
+    c\theta_{1} & -s\theta_{1} & 0 & 0 \\
+    s\theta_{1} & c\theta_{1}  & 0 & 0 \\
+    0           & 0            & 1 & 0 \\
+    0           & 0            & 0 & 1 \\
+                     \end{bmatrix}
+\end{equation}
+
+\begin{equation}
+  \prescript{1}{2}T = \begin{bmatrix}
+    c\theta_{2} & -s\theta_{2} & 0 & 1 \\
+    0           & 0            & 1 & 0 \\
+    -s\theta{2} & -c\theta_{2} & 0 & 0 \\
+    0           & 0            & 0 & 1 \\
+                     \end{bmatrix}
+\end{equation}
+
+\begin{equation}
+  \prescript{2}{3}T = \begin{bmatrix}
+    c\theta_{3} & -s\theta_{3} & 0  & 1 \\
+    0           & 0            & -1 & 0 \\
+    s\theta_{3}  & c\theta_{3}  & 0  & 0 \\
+    0           & 0            & 0  & 1 \\
+                     \end{bmatrix}
+\end{equation}
+
+\end{parts}
+
 \end{questions}
 
 \end{document}
