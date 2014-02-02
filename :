@@ -218,13 +218,11 @@ The rotation matrix is the inverse of the transformation matrix between the join
 \begin{equation}
   \prescript{1}{}J_{v} =
     \begin{bmatrix}
-      s_{3}              & -s_{2}c_{3}-s_{2} & c_{2}s_{3} \\
-      c_{2}c_{3}+c_{1}+1 & 0                 & c_{3}      \\
-      0                  & -c_{2}c_{3}-c_{2} & s_{2}s_{3} \\
+      s_{3}              & -s_{2}c_{3}-s_{2} & c_{1}s_{1}c_{3}+c_{2}s_{3} \\
+      c_{2}c_{3}+c_{1}+1 & 0                 & c_{3}                      \\
+      0                  & -c_{2}c_{3}-c_{2} & s_{2}s_{3}                 \\
     \end{bmatrix}
 \end{equation}
-
-The Jacobian in the frame $\{1\}$ is more simple to analyze.
 
 \end{parts}
 
