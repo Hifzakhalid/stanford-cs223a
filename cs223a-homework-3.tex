@@ -226,6 +226,27 @@ The rotation matrix is the inverse of the transformation matrix between the join
 
 The Jacobian in the frame $\{1\}$ is more simple to analyze.
 
+\part
+
+More simple, but not that simple though. The singularities are given by:
+
+\begin{equation}
+  det(\prescript{1}{}J_{v}) = 0
+\end{equation}
+
+\begin{equation}
+  \begin{split}
+    det(\prescript{1}{}J_{v}) & = (c_{2}c_{3}+c_{2}+1)(c_{2}^{2}c_{3}s_{3}+c_{2}^2s_{3}) - s_{3}(c_{2}c_{3}^2+c_{2}c_{3}) + (c_{2}c_{3}+c_{2}+1)(s_{2}^2s_{3}c_{3}+s_{2}^2s_{3}) \\
+    & = (c_{2}c_{3}+c_{2}+1)(c_{2}^2s_{3}c_{3}+c_{2}^2s_{3}c_{3}+s_{2}^2s_{3}) - s_{3}(c_{2}c_{3})(1+c_{3}) \\
+    & = (c_{2}c_{3}+c_{2}+1)(s_{3}c_{3}+s_{3}) - s_{3}c_{2}c_{3}(1+c_{3}) \\
+    & = s_{3}(c_{2}c_{3}+c_{2}+1)(1+c_{3}) - s_{3}c_{2}c_{3}(1+c_{3}) \\
+    & = s_{3}(1+s_{3})(c_{2}c_{3}+c_{2}+1-c_{2}c_{3}) \\
+    & = s_{3}(1+c_{3})(1+c_{2}) \\
+  \end{split}
+\end{equation}
+
+So the singularities are for $\theta_{2}=\pm180^{\circ}$, for $\theta_{3}=0^{\circ}$ and for $\theta_{3}=\pm180^{\circ}$.
+
 \end{parts}
 
 \end{questions}
