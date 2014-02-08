@@ -69,7 +69,7 @@ Based on the previous equation, the linear velocity Jacobian is:
 
 \part
 
-In case of singularity, $det(J_{V}) = 0$, meaning that $L_{2}s_{1} = 0$. In this case, $\theta_{2} = k\pi$. The end effector cannot move in the direction given by the $x$ axis.
+In case of singularity, $det(J_{V}) = 0$, meaning that $L_{2}s_{1} = 0$. In this case, $\theta_{2} = k\pi$. The end effector cannot move in the direction given by the $X$ axis.
 
 \end{parts}
 
@@ -78,7 +78,7 @@ In case of singularity, $det(J_{V}) = 0$, meaning that $L_{2}s_{1} = 0$. In this
 
 \part
 
-All of the $x$ axis are aligned. The $z$ axis are directed to the top or out of the page. In this configuration, the D-H parameters are as follow:
+All of the $X$ axis are aligned. The $Z$ axis are directed to the top or out of the page. In this configuration, the D-H parameters are as follow:
 
 \begin{centering}
 
@@ -178,7 +178,7 @@ We will use the explicit form of the Jacobian:
                      \end{bmatrix}
 \end{equation}
 
-For $J_{v}$, we derivate the position of the end-effector and for $J_{w}$, we use the ${z}$ axis of the intermediate frames:
+For $J_{v}$, we derivate the position of the end-effector and for $J_{w}$, we use the ${Z}$ axis of the intermediate frames:
 
 \begin{equation}
   \prescript{0}{}J = \begin{bmatrix}
@@ -246,6 +246,14 @@ More simple, but not that simple though. The singularities are given by:
 \end{equation}
 
 So the singularities are for $\theta_{2}=\pm180^{\circ}$, for $\theta_{3}=0^{\circ}$ and for $\theta_{3}=\pm180^{\circ}$.
+
+\part
+
+Singularity 1: $\theta_{2}=\pm180^{\circ}$. In this case, the arm is folded, joint 1 and 3 are aligned. The end effector can basically rotate around the $Z_{0}$ axis, and cannot move in this direction.
+
+Singularity 2: $\theta_{3}=0^{\circ}$. The arm is outstretched, and can no longer move in the direction of the $X_{3}$ axis.
+
+Singularity 3: $\theta_{3}=\pm180^{\circ}$. In this case, the arm is outstretched and cannot move in the direction of the $X_{3}$ axis. The end effector coincides with the joint 2, and cannot move in the direction of the $Z_{1}$ axis either. 
 
 \end{parts}
 
