@@ -10,9 +10,41 @@
 
 \begin{questions}
 
+\question
+
 \begin{parts}
 
 \part
+
+The linear Jacobian is derivated from the vector position. To be noticed the following trigonometric properties:
+
+\begin{equation}
+  \frac{\partial s_{12}}{\partial \theta_{1}} =
+    c_{1}c_{2}-s_{1}s_{2} = c_{12}
+\end{equation}
+
+And:
+
+\begin{equation}
+  \frac{\partial c_{12}}{\partial \theta_{1}} =
+    -s_{1}c_{2}-c_{1}s_{2} = -s_{12}
+\end{equation}
+
+The linear Jacobian, calculated from the partial derivates, is:
+
+\begin{equation}
+  \prescript{0}{}J_{V} = \begin{bmatrix}
+    -\sqrt{2}s_{12}c_{3}-c_{12}(s_{3}-1)-s_{1} & -\sqrt{2}s_{12}c_{3}-c_{12}(s_{3}-1) & -\sqrt{2}c_{12}s_{3}-s_{12}c_{3} & 0 \\
+    \sqrt{2}c_{12}c_{3}-s_{12}(s_{3}-1)+c_{1}  & \sqrt{2}c_{12}c_{3}-s_{12}(s_{3}-1)  & -\sqrt{2}s_{12}s_{3}+c_{12}s_{3} & 0 \\
+    0                                          & 0                                    & c_{3}                            & 0 \\
+                         \end{bmatrix}    
+\end{equation}
+
+\end{parts}
+
+\question
+
+\begin{parts}
 
 \end{parts}
 
