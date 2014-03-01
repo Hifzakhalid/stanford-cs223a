@@ -40,6 +40,19 @@ The linear Jacobian, calculated from the partial derivates, is:
                          \end{bmatrix}    
 \end{equation}
 
+For $q=[0, 90^{\circ}, -90^{\circ}, 0]^{T}$, the Jacobian is the composition of the linear calculated above and the angular:
+
+\begin{equation}
+  \prescript{0}{}J = \begin{bmatrix}
+    0 & 0 & 0                  & 0 \\
+    3 & 2 & \sqrt{2}           & 0 \\
+    0 & 0 & 0                  & 0 \\
+    0 & 0 & \frac{\sqrt{2}}{2} & \frac{\sqrt{2}}{2} \\
+    0 & 0 & 0                  & 0 \\
+    1 & 1 & \frac{\sqrt{2}}{2} & \frac{\sqrt{2}}{2} \\
+                         \end{bmatrix}
+\end{equation}
+
 \end{parts}
 
 \question
