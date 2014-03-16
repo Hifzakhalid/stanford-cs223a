@@ -75,13 +75,7 @@ The rotation matrix has to be calculated for the given position:
                       \end{bmatrix}
 \end{equation}
 
-So in frame $\{0\}$, the general force is described by $\begin{bmatrix}0, 6, 0, 10.607, 0, 0.707\end{bmatrix}^{T}$.
-
-The torque required to handle this force is given by:
-
-\begin{equation}
-  \tau = J^{T}F
-\end{equation}
+So in frame $\{0\}$, the general force is described by $\begin{bmatrix}0, 6, 0\end{bmatrix}^{T}$.
 
 \end{parts}
 
