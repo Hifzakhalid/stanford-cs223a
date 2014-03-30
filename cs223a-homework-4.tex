@@ -122,6 +122,52 @@ In this last configuration, there is only one position for the height and infini
 
 \end{parts}
 
+\question
+
+\begin{parts}
+
+\part
+
+The cubic equation for this joint position is:
+
+\begin{equation}
+  \theta = a_{0} + a_{1}t + a_{2}t^{2} + a_{3}t^{3}
+\end{equation}
+
+The derivate of this function is:
+
+\begin{equation}
+  \dot \theta = a_{1} + 2a_{2}t + 3a_{3}t^{2}
+\end{equation}
+
+The initial and final conditions can now be applied. For $t=0$:
+
+\begin{itemize}
+  \item $\theta=\theta_{0}$ so $a_{0}=\theta_{0}$
+  \item $\dot \theta=0$ so $a_{1}=0$
+\end{itemize}
+
+For $t=t_{f}$:
+
+\begin{itemize}
+  \item $\theta_{f} = \theta_{0} + a_{2}t_{f}^{2} + a_{3}t_{f}^{3}$
+  \item $0 = 2a_{2}t_{f} + 3a_{3}t_{f}^{2}$
+\end{itemize}
+
+The last two equations are enough to solve $a_{2}$ and $a_{3}$:
+
+\begin{equation}
+  a_{2} = \frac{3(\theta_{f} - \theta_{0})}{t_{f}^2}
+\end{equation}
+
+And:
+
+\begin{equation}
+  a_{3} = \frac{-2(\theta_{f} - \theta_{0})}{t_{f}^{3}}
+\end{equation}
+
+\end{parts}
+
 \end{questions}
 
 \end{document}
