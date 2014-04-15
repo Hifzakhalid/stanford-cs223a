@@ -182,14 +182,11 @@ And:
 
 So at the optimal point:
 
-(change this to a single equation)
-
 \begin{equation}
-  6t_{f}(\theta_{f} - \theta{0}) - 12(\theta_{f} - \theta_{0})t = 0 \\
-\end{equation}
-
-\begin{equation}
-  t = \frac{t_{f}}{2}
+  \begin{gather*}
+    6t_{f}(\theta_{f} - \theta{0}) - 12(\theta_{f} - \theta_{0})t = 0 \\
+    t = \frac{t_{f}}{2}
+  \end{gather*}
 \end{equation}
 
 \end{parts}
