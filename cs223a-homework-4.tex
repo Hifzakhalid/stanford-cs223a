@@ -168,7 +168,7 @@ And:
 
 \part
 
-Given that the joint position is a cubic curve, and that the derivate start and end values are zero, it means that there is one maximum in between. At this point, the second derivative is zero. Moreover, the first derivative reaches its maximum value.
+Given that the joint position is a cubic curve, and that the derivate start and end values are zero, it means that there is one maximum in between (let's consider that the joint position value is positive). At this point, the second derivative is zero. Moreover, the first derivative reaches its maximum value.
 
 \begin{equation}
   \dot \theta = \frac{6(\theta_{f} - \theta_{0})}{t_{f}^2}t + \frac{-6(\theta_{f} - \theta_{0})}{t_{f}^3}t^{2}
@@ -207,7 +207,19 @@ Applied to the joint value first derivative constraint:
     t_{f} > \frac{3(\theta_{f} - \theta{0})}{2\dot\theta_{max}}
   \end{equation}
 \end{subequations}
- 
+
+\part
+
+The second derivative of the joint position is a straight line between $\ddot \theta_{max}$ and $-\ddot \theta_{max}$ (based on the configuration described above). The constraint from the second derivative can be determined at $t=0$.
+
+\begin{subequations}
+  \begin{equation}
+    \ddot \theta_{max} > \frac{6(\theta_{f} - \theta_{0})}{t_{f}^2}
+  \end{equation}
+  \begin{equation}
+    t_{f} > \sqrt{ \frac{6(\theta_{f} - \theta_{0})}{\ddot \theta_{max}} }
+  \end{equation}
+\end{subequations}
 
 \end{parts}
 
