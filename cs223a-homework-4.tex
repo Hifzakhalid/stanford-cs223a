@@ -84,6 +84,10 @@ The torque required to handle this force is given by:
 \end{equation}
 
 \begin{equation}
+  F = -F_{app}
+\end{equation}
+
+\begin{equation}
   J^{T} = \begin{bmatrix}
     0 & 3        & 0 & 0                  & 0 & 1                  \\
     0 & 2        & 0 & 0                  & 0 & 1                  \\
@@ -92,7 +96,7 @@ The torque required to handle this force is given by:
           \end{bmatrix}
 \end{equation}
 
-Applied to the general force determine in frame $\{0\}$, that gives $\begin{bmatrix}18.707, 12.707, 16.485\end{bmatrix}^{T}$. 
+Applied to the general force determine in frame $\{0\}$, that gives $-\begin{bmatrix}18.707, 12.707, 16.485\end{bmatrix}^{T}$. 
 
 \part
 
@@ -103,12 +107,30 @@ The equations used to solve this problem are the ones from the propagation, see 
     f_{i} = f_{i+1}
   \end{equation}
   \begin{equation}
-    n_{i} = n_{i+1} - P_{i+1} \times f_{i+1}
+    n_{i} = n_{i+1} + P_{i+1} \times f_{i+1}
   \end{equation}
 \end{subequations}
 
+Mind the convention of the schematic, especially for the sign (and keep in mind that the forces should be balanced). 
 
+So the force part of the generalized force vector is:
 
+\begin{equation}
+  f = -\begin{bmatrix}0, 6, 0\end{bmatrix}^{T}
+\end{equation}
+
+For the torque, we need to convert the position vector into a skew matrix to apply the cross product. The skew matrix of a displacement of 9 units along the $\hat Z$ axis is:
+
+\begin{equation}
+  P = \begin{bmatrix}
+    0 & -9 & 0 \\
+    9 & 0  & 0 \\
+    0 & 0  & 0 \\
+      \end{bmatrix}
+\end{equation}
+
+\begin{equation}
+  P \times f =  
 \end{parts}
 
 \question
