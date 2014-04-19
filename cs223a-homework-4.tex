@@ -96,7 +96,7 @@ The torque required to handle this force is given by:
           \end{bmatrix}
 \end{equation}
 
-Applied to the general force determine in frame $\{0\}$, that gives $-\begin{bmatrix}18.707, 12.707, 16.485\end{bmatrix}^{T}$. 
+Applied to the general force determine in frame $\{0\}$, that gives $-\begin{bmatrix}18.707, 12.707, 16.485, 8.0\end{bmatrix}^{T}$. 
 
 \part
 
@@ -137,7 +137,7 @@ For the torque, we need to convert the position vector into a skew matrix to app
   N = N_{4} - P \times F
 \end{equation}
 
-Given that $N_{4} = \begin{bmatrix}-7, 0, -8\end{bmatrix}$, the torque part of the generalized force at the end of the screwdriver is $\begin{bmatrix}-61, 0, -8\end{bmatrix}$.
+Given that $N_{4} = -\begin{bmatrix}7, 0, 8\end{bmatrix}$, the torque part of the generalized force at the end of the screwdriver is $-\begin{bmatrix}61, 0, 8\end{bmatrix}$.
 
 \end{parts}
 
@@ -147,7 +147,7 @@ Given that $N_{4} = \begin{bmatrix}-7, 0, -8\end{bmatrix}$, the torque part of t
 
 \part
 
-The workspace of this manipulator is a cylinder of diameter $L_{2}+L_{3}$, excluding the inner cylinder of diameter $L_{3}-L_{2}$. No specific dimensions are given for the height. 
+The workspace of this manipulator is a cylinder of diameter $L_{2}+L_{3}$, excluding the inner cylinder of diameter $L_{2}-L_{3}$. No specific dimensions are given for the height. 
 
 \part
 
@@ -159,7 +159,7 @@ As the prismatic joints are moving along the same axis, there are infinite solut
 
 \part
 
-Without the first prismatic joint, there is only one degree of freedom for the height. That means there are two solutions, as any position in the plan can be reached by two revolute joint position.
+Without the first prismatic joint, there is only one degree of freedom for the height. That means there are two solutions, as any position in the plan can be reached by two revolute joint positions.
 
 \part
 
@@ -249,7 +249,7 @@ Applied to the joint value first derivative constraint:
     4t_{f}\dot\theta_{max} > 6(\theta_{f} - \theta_{0})
   \end{equation}
   \begin{equation}
-    t_{f} > \frac{3(\theta_{f} - \theta{0})}{2\dot\theta_{max}}
+    t_{f} > \frac{3(\theta_{f} - \theta_{0})}{2\dot\theta_{max}}
   \end{equation}
 \end{subequations}
 
