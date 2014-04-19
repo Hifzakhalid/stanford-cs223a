@@ -116,7 +116,7 @@ Mind the convention of the schematic, especially for the sign (and keep in mind 
 So the force part of the generalized force vector is:
 
 \begin{equation}
-  f = -\begin{bmatrix}0, 6, 0\end{bmatrix}^{T}
+  F = F_{4} =  -\begin{bmatrix}0, 6, 0\end{bmatrix}^{T}
 \end{equation}
 
 For the torque, we need to convert the position vector into a skew matrix to apply the cross product. The skew matrix of a displacement of 9 units along the $\hat Z$ axis is:
@@ -130,7 +130,15 @@ For the torque, we need to convert the position vector into a skew matrix to app
 \end{equation}
 
 \begin{equation}
-  P \times f =  
+  P \times F = \begin{bmatrix}54, 0, 0\end{bmatrix}^T  
+\end{equation}
+
+\begin{equation}
+  N = N_{4} - P \times F
+\end{equation}
+
+Given that $N_{4} = \begin{bmatrix}-7, 0, -8\end{bmatrix}$, the torque part of the generalized force at the end of the screwdriver is $\begin{bmatrix}-61, 0, -8\end{bmatrix}$.
+
 \end{parts}
 
 \question
