@@ -14,6 +14,54 @@
 
 \begin{parts}
 
+This question is not trial and the notes are sufficient to answer to it. You have to consider that the angular momentum and the angular velocity are vectors, and then describe the relationship between them.
+
+The standard expression for angular momentum is:
+
+\begin{subequations}
+  \begin{equation}
+    \Phi = I \omega
+  \end{equation}
+  \begin{equation}
+    \Phi' = I \omega'
+  \end{equation}
+\end{subequations}
+
+Let's consider now that they are vectors. That gives the following set of equations:
+
+\begin{subequations}
+  \begin{equation}
+    \Phi' = R \Phi
+  \end{equation}
+  \begin{equation}
+    \omega' = R \omega
+  \end{equation}
+\end{subequations}
+
+Where ${R}$ is the rotation matrix between ${C}$ and ${C'}$. By combining the equations:
+
+\begin{subequations}
+  \begin{equation}
+    \Phi' = R \Phi = R I \omega = I' \omega' = I' R \omega
+  \end{equation}
+  \begin{equation}
+    I' = R I R^{-1}
+  \end{equation}
+\end{subequations}
+
+We can now apply the parallel axis theorem from the page 4 of the handout 7, between the intermediate frame and the frame ${A}$.
+
+\begin{equation}
+  I_{A} = I_{C'} + m[(p_{C}^{T} p_{C})I_{3} - p_{C} p_{C}^{T}]
+\end{equation} 
+
+So finally:
+
+\begin{equation}
+  I_{A} = RI_{C}R^{-1} + m[(p_{C}^{T} p_{C})I_{3} - p_{C} p_{C}^{T}]
+\end{equation} 
+
+
 \part
 
 \end{parts}
