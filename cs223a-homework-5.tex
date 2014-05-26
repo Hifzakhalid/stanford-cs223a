@@ -14,6 +14,8 @@
 
 \begin{parts}
 
+\part
+
 This question is not trial and the notes are sufficient to answer to it. You have to consider that the angular momentum and the angular velocity are vectors, and then describe the relationship between them.
 
 The standard expression for angular momentum is:
@@ -61,8 +63,64 @@ So finally:
   I_{A} = RI_{C}R^{-1} + m[(p_{C}^{T} p_{C})I_{3} - p_{C} p_{C}^{T}]
 \end{equation} 
 
-
 \part
+
+First of all, let's calculate ${I_{C}}$, considering that ${s_{x}=4}$, ${s_{y}=6}$ and ${s_{z}=2}$.
+
+\begin{equation}
+  I_{C} = \begin{bmatrix}
+    40 & 0  & 0  \\
+    0  & 20 & 0  \\
+    0  & 0  & 52 \\
+          \end{bmatrix}
+\end{equation}
+
+${I_{A}}$ will be calculated term by term. ${p_{C} = [1, 1, 2]^{T}}$.
+
+So for the first term:
+
+\begin{equation}
+  RI_{C}R^{-1} = \begin{bmatrix}
+    30 & 10 & 0  \\
+    10 & 30 & 0  \\
+    0  & 0  & 52 \\
+                 \end{bmatrix}
+\end{equation}
+
+For the second term, ${p_{C}^{T}p_{C} = 6}$.
+
+That gives:
+
+\begin{equation}
+  m(p_{C}^{T}p_{C})I_{3} = 
+    \begin{bmatrix}
+      72 & 0  & 0  \\
+      0  & 72 & 0  \\
+      0  & 0  & 72 \\
+    \end{bmatrix}
+\end{equation}
+
+And for the last term:
+
+\begin{equation}
+  m(p_{C}^{T}p_{C}) = 
+    \begin{bmatrix}
+      12 & 12 & 24 \\
+      12 & 12 & 24 \\
+      24 & 24 & 48 \\
+    \end{bmatrix}
+\end{equation}
+
+Final result:
+
+\begin{equation}
+  I_{A} =
+    \begin{bmatrix}
+      90  & -2  & -24 \\
+      -2  & 90  & -24 \\
+      -24 & -24 & 76  \\
+    \end{bmatrix}
+\end{equation}
 
 \end{parts}
 
