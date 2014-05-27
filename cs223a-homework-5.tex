@@ -8,6 +8,8 @@
 \date{April 2014}
 \maketitle
 
+*** clean subscript and uperscript with ... ***
+
 \begin{questions}
 
 \question
@@ -238,6 +240,49 @@ For the link 2:
     0                & \frac{m_2}{12}(L_2^2 + h^2)             & 0           \\
     0                & 0                       & \frac{m_2}{12}2h^2          \\
                          \end{bmatrix}
+\end{equation}
+
+\part
+
+Let's break the calculation down term by term.
+
+\begin{equation}
+  J_{v1}^T J_{v1} = \begin{bmatrix}
+    \frac{L_1}{4} & 0 \\
+    0             & 0 \\
+                    \end{bmatrix}
+\end{equation}
+
+\begin{equation}
+  J_{v2}^T J_{v2} = \begin{bmatrix}
+    \L_1^2 & 0 \\
+    0      & 1 \\
+                    \end{bmatrix}
+\end{equation}
+
+\begin{equation}
+  J_{\omega1}^T \prescript{C_1}{}I_1 J_{\omega1} =
+    \begin{bmatrix}
+      I_{zz1} & 0 \\
+      0       & 0 \\
+    \end{bmatrix}
+\end{equation}
+
+\begin{equation}
+  J_{\omega2}^T \prescript{C_2}{}I_2 J_{\omega2} =
+    \begin{bmatrix}
+      I_{zz2} & 0 \\
+      0       & 0 \\
+    \end{bmatrix}
+\end{equation}
+
+So, finally, the mass matrix is:
+
+\begin{equation}
+  M = \begin{bmatrix}
+    m_1\frac{L_1^2}{4} + m_{2}L_1^2 + I_{zz1} + I_{zz2} & 0   \\
+    0                                                   & m_2 \\
+      \end{bmatrix}
 \end{equation}
 
 \end{parts}
