@@ -54,7 +54,7 @@ Where ${R}$ is the rotation matrix between ${C}$ and ${C'}$. By combining the eq
 We can now apply the parallel axis theorem from the page 4 of the handout 7, between the intermediate frame and the frame ${A}$.
 
 \begin{equation}
-  I_{A} = I_{C'} + m[(p_{C}^{T} p_{C})I_{3} - p_{C} p_{C}^{T}]
+  I_A = I_C' + m[(p_C^T p_C)I_3 - p_C p_C^T]
 \end{equation} 
 
 So finally:
@@ -193,6 +193,52 @@ Final result:
 \end{equation}
 
 There is no angular velocity since the second joint is prismatic.
+
+\part
+
+For the link 1:
+
+\begin{subequations}
+  \begin{equation}
+    s_{x} = L_1
+  \end{equation}
+  \begin{equation}
+    s_{y} = h
+  \end{equation}
+  \begin{equation}
+    s_{z} = h
+  \end{equation}
+\end{subequations}
+
+\begin{equation}
+  \prescript{C_1}{}I_1 = \begin{bmatrix}
+    \frac{m_1}{12}2h^2                         & 0             & 0           \\
+    0                & \frac{m_1}{12}(L_1^2 + h^2)             & 0           \\
+    0                & 0                       & \frac{m_1}{12}(L_1^2 + h^2) \\
+                         \end{bmatrix}
+\end{equation}
+
+For the link 2:
+
+\begin{subequations}
+  \begin{equation}
+    s_{x} = h
+  \end{equation}
+  \begin{equation}
+    s_{y} = h
+  \end{equation}
+  \begin{equation}
+    s_{z} = L_2
+  \end{equation}
+\end{subequations}
+
+\begin{equation}
+  \prescript{C_2}{}I_2 = \begin{bmatrix}
+    \frac{m_2}{12}(L_2^2 + h^2)                & 0             & 0           \\
+    0                & \frac{m_2}{12}(L_2^2 + h^2)             & 0           \\
+    0                & 0                       & \frac{m_2}{12}2h^2          \\
+                         \end{bmatrix}
+\end{equation}
 
 \end{parts}
 
