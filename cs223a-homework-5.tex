@@ -298,6 +298,98 @@ The first term can now be developed:
   \end{equation}
 \end{subequations}
 
+\part
+
+The joints positions do not affect the centrifugal and inertia along the first joint axis, so at the end, the result will be null. Let's try to develop the equation anyhow.
+
+\begin{equation}
+  v = \begin{bmatrix}
+        \dot m_{11} & 0          \\
+	0          & \dot m_{22} \\
+      \end{bmatrix} \dot q 
+      - \frac{1}{2} 
+      \begin{bmatrix}
+        \dot q^T \begin{pmatrix}
+		   m_{111} & 0       \\
+		   0       & m_{221} \\
+		 \end{pmatrix} \dot q    \\
+                                         \\
+	  \dot q^T \begin{pmatrix}
+		   m_{112} & 0       \\
+		   0       & m_{222} \\
+		 \end{pmatrix} \dot q
+      \end{bmatrix}
+\end{equation}
+
+Let's break this equation down.
+
+\begin{equation}
+  \dot m_{11} = \frac{dm_{11}}{dt} 
+              = \frac{dm_{11}}{dq_{1}} \times \frac{dq_1}{dt} +
+	        \frac{dm_{11}}{dq_{2}} \times \frac{dq_2}{dt}
+	      = m_{111}\dot q_1 + m_{112}\dot q_2
+\end{equation}
+
+In the same way, ${\dot m_{22} = m_{221}\dot q_1 + m_{222}\dot q_2}$.
+
+\begin{equation}
+  \begin{bmatrix}
+    m_{111}\dot q_1 + m_{112}\dot q_2 & 0          \\
+    0 &        m_{221}\dot q_1 + m_{222}\dot q_2   \\
+  \end{bmatrix} 
+  \begin{bmatrix}
+    \dot q_1 \\
+    \dot q_2 \\
+  \end{bmatrix} =
+  \begin{bmatrix}
+    m_{111} \dot q_1^2 + m_{112} \dot q_1 \dot q_2 \\
+    m_{221} \dot q_1 \dot q_2 + m_{222} \dot q_2^2 \\
+  \end{bmatrix}
+\end{equation}
+
+\begin{equation}
+  \dot q^T \begin{bmatrix}
+     m_{111} & 0       \\
+     0       & m_{221} \\
+           \end{bmatrix} \dot q \\ 
+  = [m_{111} \dot q_1^2 + m_{221} \dot q_2^2]
+\end{equation}
+
+Which gives for the second term:
+
+\begin{equation}
+  \dot q^T \begin{bmatrix}
+     m_{112} & 0       \\
+     0       & m_{222} \\
+           \end{bmatrix} \dot q \\ 
+  = [m_{112} \dot q_1^2 + m_{222} \dot q_2^2]
+\end{equation}
+
+\begin{equation}
+  v = \begin{bmatrix}
+    m_{111} \dot q_1^2 -\frac{1}{2}m_{111} \dot q_1^2 
+    -\frac{1}{2}m_{221} \dot q_2^2 + m_{112} \dot q_1 \dot q_2 \\
+    -\frac{1}{2}m_{112} \dot q^2 -\frac{1}{2}m_{222} \dot q^2
+    +m_{222} \dot q_2^2 + m_{221} \dot q_1 \dot q_2
+      \end{bmatrix}
+\end{equation}
+
+From this last equation, we can define ${C}$ and ${B}$:
+
+\begin{subequations}
+  \begin{equation}
+    C(q) = \begin{bmatrix}
+	     \frac{1}{2}m_{111}  & -\frac{1}{2}m_{221} \\
+	     -\frac{1}{2}m_{112} & \frac{1}{2}m_{222}  \\
+	   \end{bmatrix}
+  \end{equation}
+  \begin{equation}
+    B(q) = \begin{bmatrix}
+	     m_{112} \\
+	     m_{221} \\
+	   \end{bmatrix}
+  \end{equation}
+\end{subequations}
 
 \end{parts}
 
