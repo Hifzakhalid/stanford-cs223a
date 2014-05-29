@@ -8,8 +8,6 @@
 \date{April 2014}
 \maketitle
 
-*** clean subscript and uperscript with ... ***
-
 \begin{questions}
 
 \question
@@ -62,41 +60,41 @@ We can now apply the parallel axis theorem from the page 4 of the handout 7, bet
 So finally:
 
 \begin{equation}
-  I_{A} = RI_{C}R^{-1} + m[(p_{C}^{T} p_{C})I_{3} - p_{C} p_{C}^{T}]
+  I_A = RI_CR^{-1} + m[(p_C^T p_C)I_3 - p_C p_C^T]
 \end{equation} 
 
 \part
 
-Let's calculate ${I_{C}}$, considering that ${s_{x}=4}$, ${s_{y}=6}$ and ${s_{z}=2}$.
+Let's calculate ${I_C}$, considering that ${s_x=4}$, ${s_y=6}$ and ${s_z=2}$.
 
 \begin{equation}
-  I_{C} = \begin{bmatrix}
+  I_C = \begin{bmatrix}
     40 & 0  & 0  \\
     0  & 20 & 0  \\
     0  & 0  & 52 \\
-          \end{bmatrix}
+        \end{bmatrix}
 \end{equation}
 
 \part
 
-${I_{A}}$ will be calculated term by term. ${p_{C} = [1, 1, 2]^{T}}$.
+${I_A}$ will be calculated term by term. ${p_C = [1, 1, 2]^T}$.
 
 So for the first term:
 
 \begin{equation}
-  RI_{C}R^{-1} = \begin{bmatrix}
+  RI_CR^{-1} = \begin{bmatrix}
     30 & 10 & 0  \\
     10 & 30 & 0  \\
     0  & 0  & 52 \\
-                 \end{bmatrix}
+               \end{bmatrix}
 \end{equation}
 
-For the second term, ${p_{C}^{T}p_{C} = 6}$.
+For the second term, ${p_C^T p_C = 6}$.
 
 That gives:
 
 \begin{equation}
-  m(p_{C}^{T}p_{C})I_{3} = 
+  m(p_C^T p_C)I_3 = 
     \begin{bmatrix}
       72 & 0  & 0  \\
       0  & 72 & 0  \\
@@ -107,7 +105,7 @@ That gives:
 And for the last term:
 
 \begin{equation}
-  m(p_{C}^{T}p_{C}) = 
+  m(p_C^T p_C) = 
     \begin{bmatrix}
       12 & 12 & 24 \\
       12 & 12 & 24 \\
@@ -118,7 +116,7 @@ And for the last term:
 Final result:
 
 \begin{equation}
-  I_{A} =
+  I_A =
     \begin{bmatrix}
       90  & -2  & -24 \\
       -2  & 90  & -24 \\
@@ -135,49 +133,49 @@ Final result:
 \part
 
 \begin{equation}
-  \prescript{0}{C_{1}}T =
+  \prescript{0}{C_1}T =
     \begin{bmatrix}
-      c\theta & s\theta  & 0 & \frac{L_{1}}{2}c\theta \\
-      s\theta & -c\theta & 0 & \frac{L_{1}}{2}s\theta \\
-      0       & 0        & 1 & 0                      \\
-      0       & 0        & 0 & 1                      \\
+      c\theta & s\theta  & 0 & \frac{L_1}{2}c\theta \\
+      s\theta & -c\theta & 0 & \frac{L_1}{2}s\theta \\
+      0       & 0        & 1 & 0                    \\
+      0       & 0        & 0 & 1                    \\
     \end{bmatrix}
 \end{equation}
 
 \begin{equation}
-  \prescript{0}{C_{2}}T =
+  \prescript{0}{C_2}T =
     \begin{bmatrix}
-      c\theta & s\theta  & 0 & L_{1}c\theta \\
-      s\theta & -c\theta & 0 & L_{1}s\theta \\
-      0       & 0        & 1 & d_{2}        \\
-      0       & 0        & 0 & 1            \\
-    \end{bmatrix}
-\end{equation}
-
-\part
-
-\begin{equation}
-  \prescript{0}{}J_{v_{1}} =
-    \begin{bmatrix}
-      -\frac{L_{1}}{2}s\theta & 0 \\
-      \frac{L_{1}}{2}c\theta  & 0 \\
-      0                       & 0 \\
-    \end{bmatrix}
-\end{equation}
-
-\begin{equation}
-  \prescript{0}{}J_{v_{2}} =
-    \begin{bmatrix}
-      -L_{1}s\theta & 0 \\
-      L_{1}c\theta   & 0 \\
-      0             & 1 \\
+      c\theta & s\theta  & 0 & L_1c\theta \\
+      s\theta & -c\theta & 0 & L_1s\theta \\
+      0       & 0        & 1 & d_2        \\
+      0       & 0        & 0 & 1          \\
     \end{bmatrix}
 \end{equation}
 
 \part
 
 \begin{equation}
-  \prescript{0}{}J_{\omega_{1}} =
+  \prescript{0}{}J_{v_1} =
+    \begin{bmatrix}
+      -\frac{L_1}{2}s\theta & 0 \\
+      \frac{L_1}{2}c\theta  & 0 \\
+      0                     & 0 \\
+    \end{bmatrix}
+\end{equation}
+
+\begin{equation}
+  \prescript{0}{}J_{v_2} =
+    \begin{bmatrix}
+      -L_1s\theta & 0 \\
+      L_1c\theta  & 0 \\
+      0           & 1 \\
+    \end{bmatrix}
+\end{equation}
+
+\part
+
+\begin{equation}
+  \prescript{0}{}J_{\omega_1} =
     \begin{bmatrix}
       0 & 0 \\
       0 & 0 \\
@@ -186,7 +184,7 @@ Final result:
 \end{equation}
 
 \begin{equation}
-  \prescript{0}{}J_{\omega_{2}} =
+  \prescript{0}{}J_{\omega_2} =
     \begin{bmatrix}
       0 & 0 \\
       0 & 0 \\
@@ -202,13 +200,13 @@ For the link 1:
 
 \begin{subequations}
   \begin{equation}
-    s_{x} = L_1
+    s_x = L_1
   \end{equation}
   \begin{equation}
-    s_{y} = h
+    s_y = h
   \end{equation}
   \begin{equation}
-    s_{z} = h
+    s_z = h
   \end{equation}
 \end{subequations}
 
@@ -224,13 +222,13 @@ For the link 2:
 
 \begin{subequations}
   \begin{equation}
-    s_{x} = h
+    s_x = h
   \end{equation}
   \begin{equation}
-    s_{y} = h
+    s_y = h
   \end{equation}
   \begin{equation}
-    s_{z} = L_2
+    s_z = L_2
   \end{equation}
 \end{subequations}
 
