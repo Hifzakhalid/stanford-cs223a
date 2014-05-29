@@ -145,8 +145,8 @@ Final result:
 \begin{equation}
   \prescript{0}{C_2}T =
     \begin{bmatrix}
-      c\theta & s\theta  & 0 & L_1c\theta \\
-      s\theta & -c\theta & 0 & L_1s\theta \\
+      c\theta & -s\theta & 0 & L_1c\theta \\
+      s\theta & c\theta  & 0 & L_1s\theta \\
       0       & 0        & 1 & d_2        \\
       0       & 0        & 0 & 1          \\
     \end{bmatrix}
@@ -212,7 +212,7 @@ For the link 1:
 
 \begin{equation}
   \prescript{C_1}{}I_1 = \begin{bmatrix}
-    \frac{m_1}{12}2h^2                         & 0             & 0           \\
+    \frac{m_1}{6}h^2                           & 0             & 0           \\
     0                & \frac{m_1}{12}(L_1^2 + h^2)             & 0           \\
     0                & 0                       & \frac{m_1}{12}(L_1^2 + h^2) \\
                          \end{bmatrix}
@@ -236,7 +236,7 @@ For the link 2:
   \prescript{C_2}{}I_2 = \begin{bmatrix}
     \frac{m_2}{12}(L_2^2 + h^2)                & 0             & 0           \\
     0                & \frac{m_2}{12}(L_2^2 + h^2)             & 0           \\
-    0                & 0                       & \frac{m_2}{12}2h^2          \\
+    0                & 0                       & \frac{m_2}{6}h^2            \\
                          \end{bmatrix}
 \end{equation}
 
@@ -246,7 +246,7 @@ Let's break the calculation down term by term.
 
 \begin{equation}
   J_{v1}^T J_{v1} = \begin{bmatrix}
-    \frac{L_1}{4} & 0 \\
+    \frac{L_1^2}{4} & 0 \\
     0             & 0 \\
                     \end{bmatrix}
 \end{equation}
@@ -298,7 +298,7 @@ The first term can now be developed:
 
 \part
 
-The joints positions do not affect the centrifugal and inertia along the first joint axis, so at the end, the result will be null. Let's try to develop the equation anyhow.
+The joints positions do not affect the centrifugal and inertia along the first joint axis, so at the end, the result will be null. Let's try to develop the equation anyway.
 
 \begin{equation}
   v = \begin{bmatrix}
@@ -437,7 +437,7 @@ So finally:
 \begin{subequations}
   \begin{equation}
     \tau_1 = (L_1^2 \frac{m_1}{3} + h^2 \frac{m_1}{12} + L_1^2 m_2
-             + h^2 \frac{m_2}{6}) \ddot \Theta
+             + h^2 \frac{m_2}{6}) \ddot \theta_1
   \end{equation}
   \begin{equation}
     \tau_2 = m_2 \ddot d_2 + m_2 g
