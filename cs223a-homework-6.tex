@@ -70,9 +70,49 @@ The system stay critically damped, so:
   \end{equation}
 \end{subequations}
 
-At rest, the position is ${0}$.
+At rest, the position is 0.
 
 \part 
+
+${\alpha}$ estimates the mass, in this case it is just the mass:
+
+\begin{equation}
+  \alpha = \hat{m} = 4
+\end{equation}
+
+\begin{equation}
+  \beta = 30 sign(\dot x) + 25 x
+\end{equation}
+
+Using the error notation, the equation of motion becomes:
+
+\begin{equation}
+  \alpha \ddot e + \alpha k'_v \dot e + \alpha k'_p e = 0
+\end{equation}
+
+Keeping the stiffness at 36 implies:
+
+\begin{subequations}
+  \begin{equation}
+    \alpha k'_p = 36
+  \end{equation}
+  \begin{equation}
+    k'_p = 9
+  \end{equation}
+\end{subequations}
+
+For a critically damped system:
+
+\begin{subequations}
+  \begin{equation}
+    \frac{(\alpha + k'_v)}{2 \sqrt{\alpha k'_p m}} = 1
+  \end{equation}
+  \begin{equation}
+    k'_v = 2 \sqrt{k'_p} = 6
+  \end{equation}
+\end{subequations}
+
+
 
 \end{parts}
 
