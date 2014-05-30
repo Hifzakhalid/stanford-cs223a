@@ -166,6 +166,61 @@ The minimum ratio is for ${\theta_2 = 0^{\circ}}$ and the maximum for ${\theta_2
   \end{equation}
 \end{subequations}
 
+\part
+
+\begin{equation}
+  \alpha = M(\theta) = 
+    \begin{bmatrix}
+      4 + c_2 & 1 + c_2 \\
+      1 + c_2 & 1       \\
+    \end{bmatrix}
+\end{equation}
+
+\begin{equation}
+  \beta = V( \theta, \dot \theta) =
+    \begin{bmatrix}
+      -s_2 (\dot \theta_2^2 + 2 \dot \theta_1 \dot \theta_2) \\
+      s_2 \dot \theta_2^2                                    \\
+    \end{bmatrix}
+\end{equation}
+
+The system becomes (unit-mass system):
+
+\begin{equation}
+  \ddot \theta = \tau'
+\end{equation}
+
+The closed-loop equations of motion are now:
+
+\begin{subequations}
+  \begin{equation}
+    \ddot e_1 + k'_{v1} \dot e_1 + k'_{p1} e_1 = 0
+  \end{equation}
+  \begin{equation}
+    \ddot e_2 + k'_{v2} \dot e_2 + k'_{p2} e_2 = 0
+  \end{equation}
+\end{subequations}
+
+\begin{subequations}
+  \begin{equation}
+    k'_{p1} = \omega_1^2 = 100
+  \end{equation}
+  \begin{equation}
+    k'_{v1} = 2 \xi_1 \omega_1 = 20
+  \end{equation}
+\end{subequations}
+
+\begin{subequations}
+  \begin{equation}
+    k'_{p2} = \omega_2^2 = 400
+  \end{equation}
+  \begin{equation}
+    k'_{v2} = 2 \xi_2 \omega_2 = 40
+  \end{equation}
+\end{subequations}
+
+Considering that ${\xi_i = 1}$ for a critically damped system.
+
 \end{parts}
 
 \end{questions}
